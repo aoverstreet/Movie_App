@@ -1,0 +1,20 @@
+<p>Welcome to RetFlix! See our collection of movies below:</p>
+
+<p>
+	<%= form_tag 'movies/', method: "GET" do %>
+		<%= label_tag :query, "Search:" %> 
+		<%= text_field_tag :query, params[:query] %>
+		<%= submit_tag "Search" %>
+	<% end %>
+</p>
+<br>
+
+<ul>
+	<%@movies.each do |movie| %>
+		
+		<li><%=link_to movie.title, movie_path(movie) %></li>
+		<li><%= movie.description %></li>
+		<li><%= movie.year_released %></li>
+		<li><%= movie.ratings %></li>
+	<% end %>
+<ul>

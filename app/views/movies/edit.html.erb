@@ -1,0 +1,15 @@
+<h1>edit a new movie</h1>
+
+
+<ul>
+	
+		<% @movie.errors.full_messages.each do|msg|%>
+			<li><%= msg %></li>
+		<% end %>
+	
+	
+</ul>
+
+
+
+<%= render :partial => 'form' %>

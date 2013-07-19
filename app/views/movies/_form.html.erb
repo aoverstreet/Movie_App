@@ -1,0 +1,28 @@
+
+
+<ul>
+	
+		<% @movie.errors.full_messages.each do|msg|%>
+			<li><%= msg %></li>
+		<% end %>
+	
+	
+</ul>
+
+
+<ul>
+<%= form_for @movie do |f|%>
+
+	<li><span><%= f.label :title%></span> <%= f.text_field :title%></li>
+	<li><span><%= f.label :description%></span> <%= f.text_field :description%></li>
+	<li><span><%= f.label :year_released%></span> <%= f.text_field :year_released%></li>
+	<li><span><%= f.label :ratings%></span> <%= f.text_field :ratings%></li>
+	
+	
+<li><%= f.submit %></li>
+<% end %>
+
+
+
+</ul>
+
