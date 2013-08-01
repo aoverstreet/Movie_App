@@ -1,10 +1,9 @@
 <h1><%=@movie.title%> | <span><%=@movie.year_released%></span></h1>
-<h2><%=@movie.description%></h2>
+<h2><%=@movie.description%> | <%=@movie.ratings%></h2>
 
+ <%=link_to "Go back to list of movies", "/movies"%>
 
-
-
- <%=link_to @movie.title, @movie%>
+<!--  <%=link_to @movie.title, @movie%> -->
 
 <%=link_to 'Edit', edit_movie_path(@movie)%>
 <%=link_to 'Delete', movie_path(@movie), method: :delete%>
